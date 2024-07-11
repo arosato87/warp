@@ -86,7 +86,7 @@ task MarkDuplicates {
   Int disk_size = ceil(md_disk_multiplier * total_input_size) + additional_disk
 
   Float memory_size = 7.5 * memory_multiplier
-  Int java_memory_size = (ceil(memory_size) - 2)
+  Int java_memory_size = (ceil(memory_size) - 4)
 
   # Task is assuming query-sorted input so that the Secondary and Supplementary reads get marked correctly
   # This works because the output of BWA is query-grouped and therefore, so is the output of MergeBamAlignment.
